@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        outline: none;
+        margin: 0px;
+      }
+      .mm {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-color: rgba(137, 43, 226, 0.326);
+      }
+      .nn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+      button {
+        background-color: aqua;
+        height: 25px;
+        width: 80px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mm">
+      <h1>0</h1>
+      <div class="nn">
+        <button onclick="inc()">increment</button>
+        <button onclick="dec()">decrement</button>
+        <button onclick="reset()">reset</button>
+      </div>
+    </div>
+    <script>
+      let ar = document.querySelector("h1");
+      let count = 0;
+      function inc() {
+        count++;
+        ar.innerHTML = count;
+      }
+      function dec() {
+        count--;
+        ar.innerHTML = count;
+      }
+      function reset() {
+        count = 0;
+        ar.innerHTML = count;
+      }
+    </script>
+  </body>
+</html>
